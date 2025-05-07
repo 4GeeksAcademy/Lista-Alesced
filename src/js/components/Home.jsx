@@ -21,9 +21,9 @@ const Home = () => {
 	}
 
 	return (
-		<div className="text-center">
-			<div>Todos</div>
-			<div className="contenedor-todo-list container">
+		<div className="container">
+			<div className="Titulo">Todos</div>
+			<div className="contenedor-todo-list">
 				<ul>
 					<li>
 						<input 
@@ -40,7 +40,7 @@ const Home = () => {
 								onMouseOver={() => setShowX(index)}
 								onMouseLeave={() => setShowX(null)}
 							>{todo}
-								{ShowX === index && <small className="mx-5" onClick={() => handleDelete(index)}>x</small>}
+								{ShowX === index && <small onClick={() => handleDelete(index)}><i class="fa-solid fa-trash"></i></small>}
 							</li>
 						))
 					}
